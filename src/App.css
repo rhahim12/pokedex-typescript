@@ -1,0 +1,52 @@
+body{
+  background-color: #ef3e3e;
+  color: white;
+  
+}
+
+.App{
+  display: flex;
+  
+  align-content: center;
+  justify-content: space-around;
+  height: 100vh;
+  width: 90vw;
+  
+}
+
+.droite{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.total{
+  display: flex;
+  background-color: #292929;
+  margin-bottom: 11px;
+  
+  
+}
+.total>p{
+  margin-left: 11px;
+}
+.total>img{
+  display: flex;
+  justify-content: space-around;
+
+  
+}
+.pokedetail{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.evolution{
+  display: flex;
+}
+.pokelist{
+  overflow: scroll;
+}
+.evotype{
+  background-color: aquamarine;
+}
