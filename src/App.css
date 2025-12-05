@@ -18,11 +18,16 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .total{
   display: flex;
   background-color: #292929;
   margin-bottom: 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  color: beige;
   
   
 }
@@ -32,7 +37,7 @@ body{
 .total>img{
   display: flex;
   justify-content: space-around;
-
+  
   
 }
 .pokedetail{
@@ -41,12 +46,39 @@ body{
   flex-direction: column;
   align-items: center;
 }
+.pokedetail>img{
+  border-radius: 80px;
+  width: 60%;
+}
 .evolution{
   display: flex;
+  justify-content: center;
 }
 .pokelist{
   overflow: scroll;
 }
 .evotype{
   background-color: aquamarine;
+}
+.evolution>img{
+  width: 30%;
+  align-content: center;
+}
+.search{
+background-color: orange;
+height: 0vh;
+
+}
+.search>input{
+color: blue;
+background-color: #b62f2f;
+height: 0.46h;
+width: 10vw;
+border: none;
+}
+.pokeevo{
+  display: flex;
+  align-items: center;
+
+  
 }

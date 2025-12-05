@@ -1,4 +1,4 @@
-import type { PokemonDTO } from "./PokemonDTO"
+import type { ApiEvo, PokemonDTO } from "./PokemonDTO"
 
 
 
@@ -9,11 +9,13 @@ export function Pokemondetail({ pokemon }: { pokemon: PokemonDTO }) {
     const apitype = pokemon.apiTypes
     const evotype = apitype.map((evo: any) => {
         return (
-                <img src={evo.image} alt="" />
+            <img src={evo.image} alt="" />
         )
     })
-    // console.log(evotype)
-
+    // console.log(pokemon.apiEvolutions);
+    const apievo = pokemon.apiEvolutions
+    // console.log(apievo[0].pokedexId)
+    console.log("rhamss")
 
 
 
@@ -27,8 +29,22 @@ export function Pokemondetail({ pokemon }: { pokemon: PokemonDTO }) {
             <p>{pokemon.name}</p>
             <p>Types</p>
             <div className="evolution">
-            {evotype}
+                {evotype}
             </div>
+            <h1>Evolution</h1>
+            {apievo.length <= 0 ? <p>Pas d'evo</p> :
+                apievo.map((evo: ApiEvo) => (
+                        <div className="pokeevo">
+                            <h1>{evo.pokedexId}</h1>
+                            <p>{evo.name}</p>
+                            <img src={pokemon.sprite} alt="" />
+                        </div>
+                    )
+                )
+            }
+          
+
+
 
         </div>
     )

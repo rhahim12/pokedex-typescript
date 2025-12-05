@@ -16,13 +16,13 @@ export function Searchbar({ setRech }: { setRech: Function }) {
 
 
     return (
-        <div>
-            <form onSubmit={start}>
-                <input type="text" name="search" />
+        
+            <form  className="search" onSubmit={start}>
                 <button>OK</button>
+                <input type="text" name="search" />
 
             </form>
-        </div>
+        
     )
 
 

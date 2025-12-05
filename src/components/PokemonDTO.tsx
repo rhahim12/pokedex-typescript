@@ -5,8 +5,14 @@ export interface PokemonDTO{
     sprite:string;
     evo:Array<{id:number}>;
     apiTypes:Array<{name:string, image:any}>
-    
+    apiEvolutions : ApiEvo[]
     
 
     
+}
+
+
+export interface ApiEvo{
+    pokedexId : string;
+    name : string;
 }
